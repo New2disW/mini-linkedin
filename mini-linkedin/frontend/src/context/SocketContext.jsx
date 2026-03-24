@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }) => {
 
     useEffect(() => {
         if (user) {
-            socketRef.current = io('http://localhost:5001');
+            socketRef.current = io('https://mini-linkedin-09s6.onrender.com');
             socketRef.current.emit('join', user._id);
 
             socketRef.current.on('notification', (notif) => {
